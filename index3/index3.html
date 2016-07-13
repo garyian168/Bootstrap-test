@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>1</title>
+</head>
+<body>
+
+
+<form>
+  <input name='key'>
+  <button>确定</button>
+</form>
+
+<script>
+	$(document).ready(function() {
+      $(".link").click(function() {
+		var id = $(this).attr('rel');
+        if (is_signin) {
+          $("#modal .modal-body > form").attr("action", "url&id=" + id);
+          $("#modal").modal();
+        } else {
+          alert('需要登录后操作');
+          location.href = 'login.php'
+        }
+      });
+    });
+</script> 
+</body>
+</html>
