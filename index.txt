@@ -1,2 +1,3 @@
 徽章
 列表组 http://www.runoob.com/bootstrap/bootstrap-list-group.html
+标签-淡入淡出 http://www.runoob.com/bootstrap/bootstrap-tab-plugin.html
