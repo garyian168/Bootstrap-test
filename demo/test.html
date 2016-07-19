@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>test</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<div class="container">
+
+	<form action="/haorooms">
+	    <input type="text" id="text" required="">
+	    <input type="submit" value="跳过验证，直接提交"  formnovalidate>
+	</form>
+	<form action="/haorooms"  novalidate>
+	    <input type="text" id="text" required="">
+	    <input type="submit" value="直接提交">
+	</form>
+
+	
+</div>
+
+<script src="http://cdn.bootcss.com/jquery/3.1.0/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>
