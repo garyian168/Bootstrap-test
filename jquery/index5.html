@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>jquery</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+	#div1 {
+		width:400px;
+		height:400px;
+		padding: 10px;
+		margin:15px;
+		border:1px solid red;
+		background-color: white;
+	}
+</style>
+</head>
+
+<body>
+
+<!-- 容器 -->
+<div class="container">
+
+
+	<div id="div1">
+		glkajgkljaklgjkljklgjeageargaegbdsg34
+	</div>
+
+	<button >提交</button>
+
+
+</div><!--container结束-->
+
+
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("button").click(function(){
+			// var txt="";
+			// txt +="Width："+$("#div1").width()+"<br>";
+			// txt +="Hieght："+$("#div1").height()+"<br>";
+			// txt +="<br>"+$("#div1").innerWidth();
+			// txt +="<br>"+$("#div1").innerHeight();
+
+			// txt +="Outerwidth："+$("#div1").outerWidth()+"<br>";
+			// txt +="Outheight："+$("#div1").outerHeight()+"<br>";
+
+			// txt +="Outer width(+margin):"+$("#div1").outerWidth(true)+"<br>";
+			// txt +="Outer height(+margin):"+$("#div1").outerHeight(true);
+
+			// txt +="Document width/height:"+$(document).width();
+			// txt +="x"+$(document).height()+"\n";
+			// txt +="Window width/height:"+$(window).width();
+			// txt +="x"+$(window).height();
+			$("button").click(function(){
+				$("#div1").width(500).height(500);
+			});
+
+
+			// $("#div1").html(txt);
+			// alert(txt);
+		});
+	});
+</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

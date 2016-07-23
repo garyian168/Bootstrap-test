@@ -99,8 +99,8 @@
 					</div>
 					<div class="media-body">
 						<h4 class="media-heading">培训内容</h4>
-						<p class="text-muted">咖喱块噶课管理者过啦</p>
-						<p>框架两个娃搞这些垃圾狗两个垃圾gear</p>
+						<p class="text-muted">gagasd</p>
+						<p>fafadsafawgaga</p>
 					</div>
 				</div>
 			</div>
@@ -108,6 +108,42 @@
 	</div>
 </div>
 
+<div class="tab2">
+	<div class="container">
+		<div class="row">
+			<div class="text col-md-6 col-sm-6 tab2-text">
+				<h3>强大的学习体系</h3>
+				<p>fafadsafawgaga</p>
+			</div>
+			<div class="col-md-6 col-sm-6 tab2-img">
+				<img src="img/5.jpg" class="auto img-responsive center-block">
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="tab3">
+	<div class="container">
+		<div class="row">
+			<div class="col-md-6 col-sm-6">
+				<img src="img/5.jpg" class="auto img-responsive center-block">
+
+			</div>
+			<div class="text col-md-6 col-sm-6">
+				<h3>强大的学习体系</h3>
+				<p>fafadsafawgaga</p>				
+			</div>
+		</div>
+	</div>
+</div>
+
+
+<footer id="footer">
+	<div id="container">
+		<p>合作事宜|版权投诉</p>
+		<p>Powered by Bootstrap</p>
+	</div>
+</footer>
 
 
 <script src="http://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
@@ -126,6 +162,18 @@
 		// 				$('.carousel-inner img').eq(2).height();
 		// 	$('.carousel-control').css('line-height',$height+'px');
 		// });
+
+		//设置文字垂直居中
+		
+		$(".text").eq(0).css("margin-top",($(".auto").eq(0).height() - $('.text').eq(0).height())/ 2 + 'px');
+		$(window).resize(function(){
+			$(".text").eq(0).css("margin-top",($(".auto").eq(0).height() - $('.text').eq(0).height())/ 2 + 'px');
+		});
+
+		$(".text").eq(1).css("margin-top",($(".auto").eq(1).height() - $('.text').eq(1).height())/ 2 + 'px');
+		$(window).resize(function(){
+			$(".text").eq(1).css("margin-top",($(".auto").eq(1).height() - $('.text').eq(1).height())/ 2 + 'px');
+		});
 	});
 </script>
 </body>

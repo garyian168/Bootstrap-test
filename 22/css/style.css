@@ -1,5 +1,7 @@
 @charset "utf-8"
-
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+}
 .logo {
 	padding: 0;
 }
@@ -32,9 +34,23 @@
 	text-align: center;
 	letter-spacing: 1px;
 	color: #999;
+	margin: 20px 0 40px 0;
 }
 
 .tab1 {
 	margin: 30px;
 	color: #666;
+}
+
+.tab1 .text-muted {
+	color: #158;
+	text-decoration: line-through;
+}
+
+.tab1 .media-heading {
+	margin: 5px 0px 20px 0px;
+}
+
+.tab1 .col {
+	padding: 20px;
 }

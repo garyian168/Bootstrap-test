@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>jquery</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 容器 -->
+<div class="container">
+
+	<div class="divo">点击下滑</div>
+
+	<div class="divt" style="height:400px;background-color:orange;display:none;">gagajerlgjaerjgkeaklgjkljeakljgkejagkljaeklrjgergear</div>
+
+	<button class="divt2">stop</button>
+
+
+	<br><br><br>
+
+	<p id="A1">西二旗，地处帝都西北五环外，坐拥百度、腾讯、网易、新浪、滴滴等知名互联网公司和一众外企，数十万人聚集于“中国硅谷”，这个关系中国IT行业发展进程的软件园区，一天一小堵，三天一大堵，每一次堵车都减缓了中国互联网的发展进程。</p>
+
+	<button id="B1" class="btn btn-info">停止</button>
+
+	<br><br><br>
+
+	<p id="A2">好不容易轮到你上车，班车师傅却摆摆手说没座了。心情必然是极度崩溃的，但作为一个在西二旗上班、见过大风大浪的人，冷静，不论你是撒娇卖萌还是据理力争，班车师傅还是会无情地把你赶下车，留下一股热浪飘散在你面前，你躲不掉地吸了一口。</p>
+
+	<button id="B2" class="btn btn-info">点击</button>
+
+	<br><br><br>
+
+	<p id="A3">“政事儿”注意到，四川人民出版社出版的《永远的邓小平》一书，还有人民网刊载的文史学者周海滨《低调的“红三代”：被改变的人生轨迹》文章，记录了邓卓棣的成长轨迹。</p>
+
+	<button id="B3" class="btn btn-info">点击</button>
+
+	<br><br><br>
+
+	<p>Username:<input type="text" id="A4" name="" value="Hello World"></p>
+
+	<button id="B4" class="btn btn-info">提交</button>
+
+	<br><br><br>
+
+	<a href="http://www.aliyun.com" id="A5">阿里云</a>
+
+	<button id="B5" class="btn btn-info">提交</button>
+
+	<br><br><br>
+
+	<p id="A6">省公安厅在全省看守所开展安全管理突出问题专项整治，对抚州市东乡县看守所民警安排留所服刑人员嫖娼的问题，除将2名当事民警交由检察机关 立案侦查外，还追究了从县看守所所长直至公安局长的领导责任，其中党内警告3人、党内严重警告1人，东乡县委组织部正按程序办理看守所所长的免职手续。在 此基础上，省公安厅将东乡县看守所等11个监管场所列为全省后进监所，进行为期半年的挂牌治理。</p>
+	<button id="B6" class="btn btn-default">提交</button>
+
+	<br><br><br>
+
+	<p ><a href="http://www.baidu.com" id="A7">超链接</a></p>
+
+	<button id="B7" class="btn btn-default">提交</button>
+
+</div><!--container结束-->
+
+
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(".divo").click(function(){
+			$(".divt").slideDown(5000);
+		});
+
+		$(".divt2").click(function(){
+			$(".divt").stop();
+		});
+
+		// $("#test2").click(function(){
+		// 	$("#test1").hide("slow",function(){
+		// 		alert("Hello World");
+		// 	});
+		// });
+
+		$("#B1").click(function(){
+			$("#A1").hide(1000);
+			alert("Hello Wold");
+		});
+
+		$("#B2").click(function(){
+			$("#A2").css("color","green")
+			.slideUp(1500)
+			.slideDown(1500);
+		});
+
+		$("#B3").click(function(){
+			alert("TEXT:"+$("#A3").text());
+		});
+
+		// $("#B3").click(function(){
+		// 	alert("Content:"+$("body").html());
+		// });
+
+		$("#B4").click(function(){
+			// alert("User:"+$("#A4").val());
+			$("#A4").val("ALEX");
+		})
+
+		$("#B5").click(function(){
+			// alert("URL:"+$("#A5").attr("href"));
+			// $("#A5").attr("href","http://www.baidu.com");
+			$("#A5").attr({
+				"href":"http://www.baidu.com",
+				"title":"Hello World"
+			})
+		});
+
+		$("#B6").click(function(){
+			$("#A6").text(function(i,origText){
+				return "Hello World"+origText+"一二三四五六七八九十(index:"+i+")";
+			});
+		});
+
+		$("#B7").click(function(){
+			$("#A7").attr("href",function(i,origValue){
+				return origValue+"/jquery";
+			});
+		});
+
+	});
+</script>
+<script src="js/bootstrap.min.js"></script>
+
+</body>
+</html>

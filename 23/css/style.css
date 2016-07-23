@@ -1,0 +1,134 @@
+@charset "utf-8"
+body {
+	font-family: "Helvetica Neue", Helvetica, Arial, "Microsoft Yahei UI", "Microsoft YaHei", SimHei, "\5B8B\4F53", simsun, sans-serif;
+	background-color: #666;
+}
+.logo {
+	padding: 0;
+}
+
+#myCarousel {
+	margin: 50px 0 0 0;
+}
+
+#navbar-collapse ul {
+	margin-top: 0;
+}
+
+.carousel-inner img {
+	margin: 0 auto;
+}
+/*.carousel-control {
+	font-size:100px;
+
+}*/
+
+.tab-h2 {
+	font-size:30px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #0059b2;
+}
+
+.tab-p {
+	font-size: 18px;
+	text-align: center;
+	letter-spacing: 1px;
+	color: #999;
+	margin: 20px 0 40px 0;
+}
+
+.tab1 {
+	margin: 30px;
+	color: #666;
+}
+
+.tab1 .text-muted {
+	color: #158;
+	text-decoration: line-through;
+}
+
+.tab1 .media-heading {
+	margin: 5px 0px 20px 0px;
+}
+
+.tab1 .col {
+	padding: 20px;
+}
+
+.tab2 {
+	background-color: #eee;
+	padding: 60px 20px;
+	text-align: center;
+
+}
+
+.tab2 img {
+	width:40%;
+	height: 40%;
+}
+
+.tab3 {
+	padding: 60px 0;
+	text-align: center;
+}
+
+.tab3 img {
+	width:65%;
+	height: 65%;
+}
+
+
+
+#footer { 
+	background-color: #eee;
+	border:1px solid #ccc;
+	padding: 20px;
+	text-align: center;
+}
+
+@media (min-width: 768px){
+	.text h3{
+		font-size: 20px;
+	}
+
+	.text p {
+		font-size: 14px;
+	}
+
+	.tab2-txt {
+		float: lef
+	}
+
+	.tab2-img {
+
+	}
+}
+
+@media (min-width: 992px){
+	.text h3{
+		font-size: 24px;
+	}
+
+	.text p {
+		font-size: 16px;
+	}
+}
+
+@media (min-width: 1200px){
+	.tab-h2 {
+		font-size: 30px;
+	}
+
+	.tab-p {
+		font-size:18px;
+	}
+
+	.text h3{
+		font-size:26px;
+	}
+
+	.text p {
+		font-size: 18px;
+	}
+}

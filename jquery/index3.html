@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>jquery</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+</head>
+
+<body>
+
+<!-- 容器 -->
+<div class="container">
+
+	<p id="A1">ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD</p>
+	<p>ABCDABCDABCDABCDABCDABCDABCDABCDABCDABCDABCD</p>
+	<button id="B1">提交</button>
+
+
+	<p id="A2">zzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzzz</p>
+	<button id="B2" onclick="appendText()">提交</button>
+
+	<br><br><br>
+
+	<img src="img/0.jpg" width="400" height="400">
+	<button id="btn1">提交前</button>
+	<button id="btn2">提交后</button>
+
+	<br><br><br>
+
+	<img src="img/0.jpg" width="400" height="400">
+	<p id="A3">AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA</p>
+	<button id="B3" onclick="afterText()">提交</button>
+
+	<br><br><br>
+
+	<div id="AA4" style="border:1px solid lightblue;width:400px;height:200px;"><p id="A4">习近平指出，要加强对防汛抗洪抢险救灾的宣传报道，向全社会广泛宣传第一线涌现出来的英雄模范和先进典型，对表现突出的集体和个人要予以表彰和嘉奖，弘扬正能量，激励广大干部群众把各项工作做好，确保经济社会发展良好势头，确保社会大局稳定。</p></div>
+
+	<button id="B4">提交</button>
+
+	<br><br><br>
+
+
+	<div id="AA5" style="border:1px solid lavender;width:400px;height:200px;"><p id="A5">习近平指出，要加强对防汛抗洪抢险救灾的宣传报道，向全社会广泛宣传第一线涌现出来的英雄模范和先进典型，对表现突出的集体和个人要予以表彰和嘉奖，弘扬正能量，激励广大干部群众把各项工作做好，确保经济社会发展良好势头，确保社会大局稳定。</p></div>
+	<button id="B5">提交</button>
+
+	<br><br><br>
+
+	<p id="A6">He worked for Russian state television ORT before moving to Ukraine and joining Ukrainska Pravda, whose founder, Georgy Gongadze, was abducted and killed in 2000.</p>
+	<p class="remo1">In a statement, the Russian Foreign Ministry called Sheremet's killing "cynical" and "cruel," denouncing speculations that the perpetrators may have links to Russia.</p>
+	<p class="remo1">"He was a known and respected journalist in Russia and a top professional."</p>
+	<button id="B6">提交</button>
+
+
+	<br><br><br>
+
+	<p id="A7">He worked for Russian state television ORT before moving to Ukraine and joining Ukrainska Pravda, whose founder, Georgy Gongadze, was abducted and killed in 2000.</p>
+	<p class="remo2">In a statement, the Russian Foreign Ministry called Sheremet's killing "cynical" and "cruel," denouncing speculations that the perpetrators may have links to Russia.</p>
+	<p class="rem3">"He was a known and respected journalist in Russia and a top professional."</p>
+	<button id="B7">提交</button>
+
+</div><!--container结束-->
+
+
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script>
+	// $(document).ready(function(){
+	// 	// $("#B1").click(function(){
+	// 	// 	$("#A1").append("<b>Hello World</b>");
+	// 	// });
+
+	// 	// $("#B1").click(function(){
+	// 	// 	$("#A1").prepend("<b>Hello World!</b>");
+	// 	// });
+	// });
+
+	$(document).ready(function(){
+		$("#btn1").click(function(){
+			$("img").before("<b>Hello World</b>");
+		});
+
+		$("#btn2").click(function(){
+			$("img").after("<b>Hello World</b>");
+		});
+
+		$("#B4").click(function(){
+			$("#AA4").remove();
+		});
+
+		$("#B5").click(function(){
+			$("#AA5").empty();
+		});
+
+		$("#B6").click(function(){
+			$("p").remove(".remo1");
+		});
+
+		$("#B7").click(function(){
+			$("p").remove(".remo2,.rem3");
+		});
+	});
+
+	// function appendText(){
+	// 	var txt1 = "<p>Text.</p>";
+	// 	var txt2 = $("<p></p>").text("Text.");
+	// 	var txt3 = document.createElement("p");
+	// 	txt3.innerHTML = "Text";
+	// 	$("body").append(txt1,txt2,txt3);
+	// }
+
+	function afterText(){
+		var txt1="<b>I</b>";
+		var txt2=$("<i></i>").text("love");
+		var txt3=document.createElement("b");
+		txt3.innerHTML="jQuery!";
+		$("img").after(txt1,txt2,txt3);
+	}
+</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>

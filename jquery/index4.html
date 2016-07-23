@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>jquery</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+	.important {
+		font-weight: bold;
+		font-size: xx-large;
+		background-color:lavender;
+	}
+
+	.blue {
+		color: #FF3333;
+		font-size: 35px;
+	}
+	.orange {
+		background-color: orange;
+	}
+</style>
+</head>
+
+<body>
+
+<!-- 容器 -->
+<div class="container">
+
+<!-- 	<h1>The Tourism Bureau confirmed that the group of tourists was from Dalian City in Liaoning Province, China.</h1>
+	<h2>The Tourism Bureau confirmed that the group of tourists was from Dalian City in Liaoning Province, China.</h2>
+	<p>Of the dead, 24 were tourists from China, including three children. A Taiwanese tour guide and the bus driver also died.</p>
+	<p>Of the dead, 24 were tourists from China, including three children. A Taiwanese tour guide and the bus driver also died.</p>
+	<div id="A1">The crash occurred just before 1 p.m. local time on the No. 2 National Freeway that serves the capital Taipei's airport, CNA reported.</div>
+
+	<button id="B1">submit</button>
+
+	<br><br><br>
+
+	<p id="A2">It may come as a surprise to those stuck at the back of the economy class cabin, but these are exciting times for the aircraft seating industry.</p>
+	<p>Such as lavatories with anti-bacterial surfaces, or better designed overhead bins that reduce boarding time by making it easier to store hand luggage.</p>
+	<button id="B2">submit</button>
+
+	<h1 class="important">Such as lavatories with anti-bacterial surfaces</h1>
+	<h2 class="blue">Such as lavatories with anti-bacterial surfaces</h2>
+	<p>Such as lavatories with anti-bacterial surfaces</p>
+	<button id="B3">提交</button>
+
+	<br><br><br>
+
+	<h1>I was probably 10 years old and I'd call collect to the Trump Organization.</h1>
+	<h2>Ivanka Trump recalled of her private school days </h2>
+	<p>at the Chapin School in New York City.</p>
+
+	<button id="B4">提交</button>
+
+	<br><br><br>
+
+	<p style="background-color:#0000ff;" id="A3">I was probably 10 years old and I'd call collect to the Trump Organization.</p>
+	<p style="background-color:#ff0000;">I was probably 10 years old and I'd call collect to the Trump Organization.</p>
+
+	<button id="B5">提交</button>
+
+	<br><br><br> -->
+
+<!-- 	<p style="background-color:red;">The Tourism Bureau confirmed that the group of tourists was from Dalian City in Liaoning Province, China.</p>
+	<p style="background-color:green;">The Tourism Bureau confirmed that the group of tourists was from Dalian City in Liaoning Province, China.</p>
+	<p style="background-color:blue;">The Tourism Bureau confirmed that the group of tourists was from Dalian City in Liaoning Province, China.</p>
+	<button id="B6">提交</button> -->
+
+<!-- 	<p style="background-color:green;">Such as lavatories with anti-bacterial surfaces, or better designed overhead</p>
+	<p style="background-color:lavender;">Such as lavatories with anti-bacterial surfaces, or better designed overhead</p>
+	<p style="background-color:lightblue;">Such as lavatories with anti-bacterial surfaces, or better designed overhead</p>
+	<button id="B7">提交</button>
+ -->
+
+<!-- 	<p style="background-color:lightgreen;height:500px;height:500px;"></p>
+	<button id="B8">提交</button> -->
+
+	<p style="background-color:lightgreen;height:500px;height:500px;"></p>
+	<button id="B9">提交</button>
+
+</div><!--container结束-->
+
+
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$("#B1").click(function(){
+			$("h1,h2").addClass("important");
+			$("p").addClass("blue");
+			$("#A1").addClass("orange");
+		});
+		
+		$("#B2").click(function(){
+			$("#A2").addClass("blue orange");
+		});
+
+		$("#B3").click(function(){
+			$("h1").removeClass("important");
+			$("h2").removeClass("blue");
+		});
+
+		$("#B4").click(function(){
+			$("h1,h2,p").toggleClass("orange");
+		})
+
+		$("#B5").click(function(){
+			alert("The color is = "+ $("#A3").css("background-color"));
+		});
+
+		$("#B6").click(function(){
+			$("p").css("background-color","#D3B9EE");
+		});
+
+		$("#B7").click(function(){
+			$("p").css({"background-color":"red","font-size":"50px"});
+		})
+
+		$("#B8").click(function(){
+			var txt = "";
+			txt +="Width :"+$("p").width()+"<br>";
+			txt +="Height:"+$("p").height();
+			$("p").html(txt);
+		});
+
+		$("#B9").click(function(){
+			var txt = "";
+			txt += "Inner width of p"+$("p").innerWidth()+"<br>";
+			txt += "Inner height of p"+$("p").innerHeight();
+			$("p").html(txt);
+		});
+	});
+</script>
+<script src="js/bootstrap.min.js"></script>
+</body>
+</html>
