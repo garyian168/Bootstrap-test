@@ -6,20 +6,74 @@
 <title>响应式导航</title>
 <link href="css/bootstrap.min.css" rel="stylesheet">
 <style type="text/css">
-	.blur {
-		color: transparent;
-		text-shadow: 0 0 5px rgba(0,0,0,0.5);
+#myDIV {
+    -webkit-animation: mymove 5s infinite; /* Chrome, Safari, Opera */
+    animation: mymove 5s infinite;
 }
+
+/* Chrome, Safari, Opera */
+@-webkit-keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+
+/* Standard syntax */
+@keyframes mymove {
+    50% {text-shadow: 10px 20px 30px blue;}
+}
+
+#myDIV span {
+	pointer-events: none;
+}
+
+/*img.desaturate {
+    filter: grayscale(100%);
+    -webkit-filter: grayscale(100%);
+    -moz-filter: grayscale(100%);
+    -ms-filter: grayscale(100%);
+    -o-filter: grayscale(100%);
+}*/
 </style>
 </head>
 <body>
 
 <div class="component">
-<p class="blur">Hello World</p>
+	<p id="myDIV">Lagarde is accused of intervening in a court dispute between French tycoon Bernard Tapie and the bank Credit Lyonnais in 2007, when she served as finance minister under President Nicolas Sarkozy.</p><br>
+	<span>when she served as finance minister under President Nicolas Sarkozy.</span><br>
+
+
+	<img class="desaturate" src="img/6.jpg" width="600" height="600">
+	<br>
+
+	<form class="form-table">
+		<input type="checkbox" name="" id="1"><label for="1">111111</label><br>
+		<input type="checkbox" name="" id="2"><label for="2">22222</label><br>
+		<input type="checkbox" name="" id="3"><label for="3">33333</label><br>
+		<input type="checkbox" name="" id="4"><label for="4">44444</label><br>
+		<input type="checkbox" name="" id="5"><label for="5">55555</label><br>
+	</form>
+
+	<br><br>
+	<button>提交</button>
 </div>
 
-<script src="http://cdn.bootcss.com/jquery/2.0.0/jquery.min.js"></script>
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
+<script>
+	$(document).ready(function(){
+		$("button").click(function(){
+			$(".desaturate").css({"box-shadow":"10px 10px 5px #888888"});
+		});
 
+	$(".form-table input:checkbox").click(function(){ 
+		var len = $("input:checkbox:checked").length; 
+		if(len>3){ 
+			alert('亲，最多只能选三个哟~'); 
+			return false; //另刚才勾选的取消 
+		} 
+	});		
+	});
+
+
+</script>
 </body>
 </html>

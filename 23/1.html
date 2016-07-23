@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title>123</title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+<style type="text/css">
+	.boxcolor {
+		background-color: orange;
+		border:1px solid red;
+	}
+
+	.boxcolor2 {
+		border:1px solid blue;
+	}
+</style>
+</head>
+<body>
+
+	<nav class="navbar navbar-inverse">
+ 	  <div class="container-fluid">
+	    <div class="navbar-header">
+	      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span>
+	        <span class="icon-bar"></span> 
+	      </button>
+	      <a class="navbar-brand" href="#">子弹头照明</a>
+	    </div>
+	    <div class="collapse navbar-collapse" id="myNavbar">
+	      <ul class="nav navbar-nav">
+	        <li class="active"><a href="#">Home</a></li>
+	        <li><a href="#">Page 1</a></li>
+	        <li><a href="#">Page 2</a></li> 
+	        <li><a href="#">Page 3</a></li> 
+	      </ul>
+	      <ul class="nav navbar-nav navbar-right">
+	        <li><a href="#"><span class="glyphicon glyphicon-user"></span> Sign Up</a></li>
+	        <li><a href="#"><span class="glyphicon glyphicon-log-in"></span> Login</a></li>
+	      </ul>
+	    </div>
+	  </div>
+	</nav>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-xs-6 boxcolor">11</div>
+			<div class="col-lg-8 col-xs-6">22</div>
+		</div>
+	</div>
+
+	<div style="height:100px;"></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-4 col-xs-4 boxcolor">一</div>
+			<div class="col-lg-8 col-xs-8 boxcolor2">二</div>
+		</div>
+	</div>
+
+	<div style="height:50px;"></div>
+
+	<div class="container">
+		<div class="row">
+			<div class="col-lg-8">	
+				<div class="panel panel-default">
+					<div class="panel-body">
+						A Basic Panel
+					</div>
+				</div>
+			</div>
+			<div class="col-lg-4">
+				A Basic Panel
+			</div>	
+		</div>
+	</div>
+
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script>
+if( /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ) {
+window.location = "index.html"; //可以换成http地址
+}
+</script>
+</body>
+</html>
