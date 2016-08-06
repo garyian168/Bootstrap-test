@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no">
+<title></title>
+<link href="css/bootstrap.min.css" rel="stylesheet">
+
+</head>
+<body>
+
+
+<img class="lazy" src="img/2.jpg" data-original="img/1.jpg" width="765" height="564">
+<noscript><img src="img/1.jpg" alt="jQuery图片预加载(延迟加载)插件Lazy Load" width="640" heigh="480"></noscript>
+
+<div style="width:200px;height:300px;background-color:white;"></div>
+
+<img class="lazy" data-original="img/2.jpg" width="765" height="564">
+
+<div style="width:200px;height:200px;background-color:white;"></div>
+
+<img class="lazy" data-original="img/3.jpg" width="765" height="564">
+
+<div style="width:200px;height:200px;background-color:white;"></div>
+
+<img class="lazy" data-original="img/4.jpg" width="765" height="564">
+
+<div style="width:200px;height:200px;background-color:white;"></div>
+
+<img class="lazy" data-original="img/5.jpg" width="765" height="564">
+
+
+
+<script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
+<script src="js/bootstrap.min.js"></script>
+<script src="js/jquery.lazyload.min.js"></script>
+<script type="text/javascript">
+	$(document).ready(function(){
+		$(function(){
+			$("img.lazy").lazyload({
+				threshold : 200, /*提前加载*/
+				effect : "fadeIn",
+				skip_invisible : false
+			});
+		});		
+	});
+</script>
+
+</body>
+</html>

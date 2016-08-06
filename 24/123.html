@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="Keywords" content="关键词一，关键词二">
+    <meta name="Description" content="网站描述内容">
+    <meta name="Author" content="刘艳">
+    <title></title>
+    <style>
+        #content{width:800px;margin: 30px auto;position: relative;}
+        input[type="radio"]{display: none;}
+        input[type="radio"]~img{width: 800px;position: absolute;top:0px;left:0px;opacity: 0;height: 500px;transform:scale(1.1);transition:all 1s;}
+        input:checked +label + img{opacity: 1;transform:scale(1.0);}
+        input:checked +label img{border: 8px solid #FFDA34; opacity: 1.0; transition: all 1s;}
+        label {display: inline-block;width: 134px;margin: 5px 8px;}
+        label img{ opacity:0.5; width: 134px; margin-top:500px;height: 75px;border:8px solid #000;}
+    </style>
+</head>
+<body>
+    <div id = "content">
+        <input type = "radio" name="carousel" id = "list1" checked>
+        <label for="list1">
+            <img src="img/1.jpg">
+        </label>
+        <img src="img/1.jpg">
+
+        <input type = "radio" name="carousel" id = "list2">
+        <label for="list2">
+            <img src="img/2.jpg">
+        </label>
+        <img src="img/2.jpg">
+
+        <input type = "radio" name="carousel" id = "list3">
+        <label for="list3">
+            <img src="img/3.jpg">
+        </label>
+        <img src="img/3.jpg">
+
+        <input type = "radio" name="carousel" id = "list4">
+        <label for="list4">
+            <img src="img/4.jpg">
+        </label>
+        <img src="img/4.jpg">
+
+        <input type = "radio" name="carousel" id = "list5">
+        <label for="list5">
+            <img src="img/5.jpg">
+        </label>
+        <img src="img/5.jpg">
+    </div>
+</body>
+</html>
