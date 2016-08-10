@@ -8,20 +8,32 @@
 <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <style type="text/css">
+    body {
+        background-color: #456;
+    }
+
 	#showTxt {
 		font-size:50px;
 		color: green;
 		text-align: center;
 	}
+
+    .con {
+        
+    }
 </style>
 <body>
 
-<div class="container">
+<div class="container con">
 	<div class="row">
 	<div class="col-xs-12">
 		<div id="showTxt"></div>
 	</div>		
 	</div>
+    <div class="col-xs-12">
+        <button class="btn btn-block">刷新</button>
+    </div>
+    
 </div>
 
 
@@ -29,13 +41,6 @@
 <script src="http://cdn.bootcss.com/jquery/1.9.1/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
 <script>
-	// function loadXML(url){
-	// 	var ojx = new XMLHttpRequest();
-	// 	ojx.open("GET",url,true);
-	// 	ojx.send();
-	// }
-
-
 function randomSort(arr, newArr) {
     // 如果原数组arr的length值等于1时，原数组只有一个值，其键值为0
     // 同时将这个值push到新数组newArr中
@@ -56,7 +61,8 @@ function randomSort(arr, newArr) {
 
 // for (var i = 0; i < 10; i++) {
 	var x = 0;
-    var arr=["A","B","C","D","E","F","G","H","I","K"];
+    var txt=["A","B","C","D","E","F","G","H","I","K"];
+    var arr=txt;
     var newArr=[];
     randomSort(arr,newArr);
     // console.log(newArr);
